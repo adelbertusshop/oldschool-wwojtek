@@ -1,0 +1,28 @@
+import Link from 'next/link'
+
+export default function Header(){
+  return (
+    <header className="scanlines py-4 border-b border-black/10">
+      <div className="container flex items-center justify-between">
+        <div className="flex items-center gap-4">
+          <img src="/assets/logo.png" alt="OldSchool by WWWojtek" className="h-14 w-14 object-contain"/>
+          <div>
+            <div className="h1-pixel">OLD SCHOOL</div>
+            <div className="text-xs subtitle">by WWWojtek</div>
+          </div>
+        </div>
+
+        <nav className="hidden sm:flex gap-4 text-sm">
+          <Link href="#services"><a className="hover:underline">Usługi</a></Link>
+          <Link href="#portfolio"><a className="hover:underline">Realizacje</a></Link>
+          <Link href="#pricing"><a className="hover:underline">Cennik</a></Link>
+          <Link href="#contact"><a className="hover:underline">Kontakt</a></Link>
+        </nav>
+
+        <div className="sm:hidden">
+          <button className="btn-retro">MENU</button>
+        </div>
+      </div>
+    </header>
+  )
+}
